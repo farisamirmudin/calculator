@@ -1,0 +1,33 @@
+button {
+    width: 100%;
+}
+#placement {
+    position: absolute;
+    top: 85px;
+}
+
+#container {
+    width: 20vw;
+    display:grid;
+    grid-template-rows: 50px;
+    grid-gap: 10px;
+    padding:10px;
+    
+}
+#block1 {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+.blockNum {
+    display: grid;
+    grid-template-columns: repeat(4,5vw);
+}
+#block0 {
+    grid-column: 1/3;
+}
+#result {
+    text-align: right;
+    padding:10px;
+    box-sizing: border-box;
+    overflow: auto;
+}
