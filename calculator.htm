@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="calcConf.css">
+  <script src="calcFunc.js"></script>
+  <title>Calculator</title>
+</head>
+<body>
+<div id="container">
+  <div class="display">
+    <p id="result">0</p>
+  </div>
+  <div id="placement">
+    <div class="block">
+      <button onclick="document.getElementById('result').innerHTML = '0'">AC</button>
+      <button onclick="sign()">+/-</button>
+      <button onclick="percent()">%</button>
+      <button onclick="display(this)">/</button>
+    </div>
+    <div class="block">
+      <button onclick="display(this)">7</button>
+      <button onclick="display(this)">8</button>
+      <button onclick="display(this)">9</button>
+      <button onclick="display(this)">*</button>
+    </div>
+    <div class="block">
+      <button onclick="display(this)">4</button>
+      <button onclick="display(this)">5</button>
+      <button onclick="display(this)">6</button>
+      <button onclick="display(this)">-</button>
+    </div>
+    <div class="block">
+      <button onclick="display(this)">1</button>
+      <button onclick="display(this)">2</button>
+      <button onclick="display(this)">3</button>
+      <button onclick="display(this)">+</button>
+    </div>
+    <div class="block">
+      <button onclick="display(this)">0</button>
+      <button onclick="display(this)">.</button>
+      <button onclick="document.getElementById('result').innerHTML =
+      eval(document.getElementById('result').innerHTML)">=</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

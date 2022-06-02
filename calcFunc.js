@@ -1,35 +1,23 @@
-$(document).ready(function() {
-    $("button").addClass("btn btn-light");
-    $(".yellow").removeClass("btn-light").addClass("btn-warning");
-    $("button").click(function(){
-        switch (this.innerHTML) {
-            case 'AC':
-                $(document.getElementById("result").innerHTML = 0);
-                break;
-            case '+/-':
-                $current = document.getElementById('result').innerHTML;
-    if($current > 0)
-        document.getElementById('result').innerHTML = -$current;
-    else if ($current < 0)
-        document.getElementById('result').innerHTML = -$current;
+function display(text){
+    let number = text.innerHTML;
+    let current = document.getElementById('result').innerHTML;
+    if(current == '0')
+        document.getElementById('result').innerHTML = number;
     else
-        document.getElementById('result').innerHTML = 0;
-        break;
-        case '%':
-            document.getElementById('result').innerHTML =
+        document.getElementById('result').innerHTML += number;
+}
+
+function sign(){
+    let current = document.getElementById('result').innerHTML;
+    if(current > 0)
+        document.getElementById('result').innerHTML = '-' + current;
+    else if (current < 0)
+        document.getElementById('result').innerHTML = current.substr(1);
+    else
+        document.getElementById('result').innerHTML = '0';
+
+}
+function percent() {
+    document.getElementById('result').innerHTML =
         document.getElementById('result').innerHTML / 100;
-        break;
-        case '=':
-            document.getElementById('result').innerHTML =
-      eval(document.getElementById('result').innerHTML);
-      break;
-      default:
-          $current = document.getElementById('result').innerHTML;
-        if($current == '0')
-          document.getElementById('result').innerHTML = this.innerHTML;
-      else
-        document.getElementById('result').innerHTML += this.innerHTML;
-        }
-        
-      });
-  });
+}
