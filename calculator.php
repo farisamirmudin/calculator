@@ -20,11 +20,6 @@ function($todo, $num)
             $num += $num;
     }
 }
-
-
-
-
-
 ?>
 
 <!doctype html>
@@ -39,7 +34,7 @@ function($todo, $num)
             margin-bottom: 5px;
         }
     </style>
-    <title>Products CRUD</title>
+    <title>Calculator</title>
 </head>
 <body>
 
